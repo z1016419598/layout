@@ -5,15 +5,64 @@
 		<title></title>
 	</head>
 	<style>
+		*{
+			margin: 0px;
+			padding: 0px;
+			font-family:"微软雅黑" monospace;
+		}
 		.header{
 			width: auto;
 			height: 50px;
 			background-color: hsl(0,0%,20%);
 		}
+		.header>div{
+			width: 900px;
+			margin: 0 auto;
+		}
+		.header>div>a{
+			float: right;
+			color: hsl(0,0%,100%);
+			margin-left: 10px;
+		}
+		.logo{
+			display: inline;
+			color: hsl(0,0%,100%);
+			line-height: 50px;
+			margin-left: 1rem;
+			font-size: 2rem;
+		}
 		.nav{
 			width: auto;
 			height: 200px;
 			background-color: hsl(97,73%,33%);
+		}
+		.nav>div{
+			width: 900px;
+			height: 200px;
+			margin: 0 auto;
+			position: relative;
+		}
+		.nav .selector{
+			position: absolute;
+			bottom: 6px;
+			right: 20px;			
+		}
+		.nav .selector li{
+			display: inline-block;
+			background-color: hsl(99,54%,84%);
+			width: 1.5rem;
+			margin-left: 0.5rem;
+			font-size: 1.2rem;
+			line-height: 2rem;
+			text-align: center;
+			border: 1px solid #F4F4F4;
+			vertical-align: bottom;
+			
+		}
+		.nav .selector .active{
+			height: 3rem;
+			line-height: 4rem;
+			background-color: hsl(98,15%,94%);
 		}
 		.content{
 			width: auto;
@@ -27,8 +76,24 @@
 		}
 	</style>
 	<body>
-		<div class="header"></div>
-		<div class="nav"></div>
+		<div class="header">
+			<div>
+			<h1 class="logo">logo</h1>
+			<a>Github</a>
+			<a>Register</a>
+			<a>Login</a>
+			</div>
+		</div>
+		<div class="nav">
+			<div>
+			<ul class="selector">
+				<li>1</li>
+				<li class="active">2</li>
+				<li>3</li>
+				<li>4</li>
+			</ul>
+			</div>
+		</div>
 		<div class="content"></div>
 		<div class="footer"></div>
 	</body>
