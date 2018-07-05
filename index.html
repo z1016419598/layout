@@ -31,23 +31,23 @@
 			margin-left: 1rem;
 			font-size: 2rem;
 		}
-		.nav{
+		.bnner{
 			width: auto;
 			height: 200px;
 			background-color: hsl(97,73%,33%);
 		}
-		.nav>div{
+		.bnner>div{
 			width: 900px;
 			height: 200px;
 			margin: 0 auto;
 			position: relative;
 		}
-		.nav .selector{
+		.bnner .selector{
 			position: absolute;
 			bottom: 6px;
 			right: 20px;			
 		}
-		.nav .selector li{
+		.bnner .selector li{
 			display: inline-block;
 			background-color: hsl(99,54%,84%);
 			width: 1.5rem;
@@ -59,15 +59,28 @@
 			vertical-align: bottom;
 			
 		}
-		.nav .selector .active{
+		.bnner .selector .active{
 			height: 3rem;
 			line-height: 4rem;
 			background-color: hsl(98,15%,94%);
 		}
 		.content{
 			width: auto;
-			height: 300px;
 			background-color: hsl(0,0%,100%);
+		}
+		.content{
+			display: flex;
+			flex-flow:row wrap;
+			width: 900px;
+			margin: 0 auto;
+		}
+		.content article{
+			flex-grow: 1;
+			margin: 4px;
+			padding: 80px;
+			box-sizing: border-box;
+			text-align: center;
+			border: 1px solid #F4F4F4;	
 		}
 		.footer{
 			width: auto;
@@ -76,15 +89,15 @@
 		}
 	</style>
 	<body>
-		<div class="header">
+		<header class="header">
 			<div>
 			<h1 class="logo">logo</h1>
 			<a>Github</a>
 			<a>Register</a>
 			<a>Login</a>
 			</div>
-		</div>
-		<div class="nav">
+		</header>
+		<section class="bnner">
 			<div>
 			<ul class="selector">
 				<li>1</li>
@@ -93,8 +106,18 @@
 				<li>4</li>
 			</ul>
 			</div>
-		</div>
-		<div class="content"></div>
-		<div class="footer"></div>
+		</section>
+		<main class="content">
+			<article>Lorem, ipsum dolor.</article>
+			<article>Lorem, ipsum dolor.</article>
+			<article>Lorem, ipsum dolor.</article>
+			<article>Lorem.</article>
+			<article>Lorem.</article>
+			<article>Lorem.</article>
+			<article>Lorem, ipsum.</article>
+			<article>Lorem, ipsum.</article>
+			<article>Lorem, ipsum.</article>
+		</main>
+		<footer class="footer"></footer>
 	</body>
 </html>
